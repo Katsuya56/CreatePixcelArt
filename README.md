@@ -15,6 +15,7 @@ ImportError: libGL.so.1: cannot open shared object file: No such file or directo
 ```
 apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 ```
+Dockerで実行した場合とローカルのWindowsで実行した場合でcolorchooser.askcolor()のUIが異なりました
 
 # 参考記事
 [stackoverflow ImportError: libGL.so.1: cannot open shared object file: No such file or directory](https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo)
