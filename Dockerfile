@@ -13,7 +13,5 @@ WORKDIR /home/Test
 COPY ./ ./
 
 # ライブラリのインストール
+RUN pip install --upgrade
 RUN pip install -r requirements.txt
-
-# プログラムの実行
-CMD ["python"]
