@@ -115,7 +115,7 @@ def pixcels():
 	# ホームウィンドウに戻る
 	close_button = tk.Button(
 		frame_pixcels,
-		text='Close',
+		text='Back',
 		command=lambda: [frame_pixcels.destroy(), home()]
 	)
 	close_button.pack()

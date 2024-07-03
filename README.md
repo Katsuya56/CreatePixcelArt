@@ -1,21 +1,51 @@
 # PixcelArt
-N×Nピクセルのピクセルアートを作成するプログラム
 
-# 概要
-tkinterを使ってN×NマスのGUIを操作してピクセルアートを作成します
+N×N ピクセルのピクセルアートを作成するプログラム
 
-OpenCVを使ってnumpy配列から画像を作成しています
+# 環境構築方法
 
-# 備考
-そのままDockerで実行すると以下のエラーが出た
-```
-ImportError: libGL.so.1: cannot open shared object file: No such file or directory
-```
-以下のコマンドで解決した
-```
-apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
-```
-Dockerで実行した場合とローカルのWindowsで実行した場合でcolorchooser.askcolor()のUIが異なりました
+1. 仮想環境を立てる
 
-# 参考記事
-[stackoverflow ImportError: libGL.so.1: cannot open shared object file: No such file or directory](https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo)
+   ```
+   python -m venv .venv
+   ```
+
+1. vscode 上の Python の拡張機能が、実行する Python を仮想環境のものにするか聞いてくるので Yes を選択する
+
+1. pip の更新
+
+   ```
+   python.exe -m pip install --upgrade pip
+   ```
+
+1. ライブラリをインストールする
+   ```
+   pip install -r requirements.txt
+   ```
+
+# 処理順序
+
+1. セレクトメニューで縦・横のピクセルの数を選択する
+1. ボタンを押して次の画面へ
+1. ピクセルをクリックすると色を選択できるようになる
+1. 色を選択する
+1. 3.4.をくりかえり
+1. Criate ボタンで画像を生成
+1. Back ボタンで最初の画面へ
+
+# 使っているライブラリ
+
+requirements.txt
+
+```text
+numpy==2.0.0
+opencv-python==4.10.0.84
+pillow==10.4.0
+```
+
+# 自分の環境
+
+- OS
+  windows11
+- Python
+  3.11.1
